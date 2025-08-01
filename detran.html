@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulado - Campo Grande, MS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .question p {
+            margin: 0 0 10px;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        #result {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .correct {
+            background-color: #dff0d8;
+        }
+        .incorrect {
+            background-color: #f2dede;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simulado - Campo Grande, MS</h1>
+    <p>Instruções: Responda às 30 questões abaixo. Para ser aprovado, é necessário acertar pelo menos 21 questões (70%). Clique em "Corrigir" ao final para ver o resultado.</p>
+
+    <form id="quizForm">
+        <div class="question" id="q1">
+            <p>1. Qual é a penalidade para o condutor que dirigir com a CNH suspensa?</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a"> a) Multa e advertência por escrito</label>
+                <label><input type="radio" name="q1" value="b"> b) Multa e cassação da CNH</label>
+                <label><input type="radio" name="q1" value="c"> c) Advertência e curso de reciclagem</label>
+                <label><input type="radio" name="q1" value="d"> d) Multa e apreensão do veículo</label>
+            </div>
+        </div>
+
+        <div class="question" id="q2">
+            <p>2. Em uma via urbana sem sinalização, qual é a velocidade máxima permitida?</p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a"> a) 40 km/h</label>
+                <label><input type="radio" name="q2" value="b"> b) 60 km/h</label>
+                <label><input type="radio" name="q2" value="c"> c) 80 km/h</label>
+                <label><input type="radio" name="q2" value="d"> d) 30 km/h</label>
+            </div>
+        </div>
+
+        <div class="question" id="q3">
+            <p>3. O que é direção defensiva?</p>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a"> a) Dirigir em alta velocidade para evitar acidentes</label>
+                <label><input type="radio" name="q3" value="b"> b) Dirigir de forma a prevenir acidentes, antecipando riscos</label>
+                <label><input type="radio" name="q3" value="c"> c) Dirigir apenas em vias sinalizadas</label>
+                <label><input type="radio" name="q3" value="d"> d) Dirigir sem respeitar os limites de velocidade</label>
+            </div>
+        </div>
+
+        <div class="question" id="q4">
+            <p>4. Qual é o primeiro passo ao prestar socorro a uma vítima de acidente de trânsito?</p>
+            <div class="options">
+                <label><input type="radio" name="q4" value="a"> a) Mover a vítima imediatamente</label>
+                <label><input type="radio" name="q4" value="b"> b) Verificar a segurança do local</label>
+                <label><input type="radio" name="q4" value="c"> c) Ligar o pisca-alerta do veículo</label>
+                <label><input type="radio" name="q4" value="d"> d) Aplicar torniquete em ferimentos</label>
+            </div>
+        </div>
+
+        <div class="question" id="q5">
+            <p>5. Qual é a função do cinto de segurança?</p>
+            <div class="options">
+                <label><input type="radio" name="q5" value="a"> a) Aumentar a velocidade do veículo</label>
+                <label><input type="radio" name="q5" value="b"> b) Reduzir o risco de lesões em acidentes</label>
+                <label><input type="radio" name="q5" value="c"> c) Melhorar a visibilidade do condutor</label>
+                <label><input type="radio" name="q5" value="d"> d) Evitar multas de trânsito</label>
+            </div>
+        </div>
+
+        <div class="question" id="q6">
+            <p>6. O que deve ser feito para reduzir a poluição causada por veículos?</p>
+            <div class="options">
+                <label><input type="radio" name="q6" value="a"> a) Aumentar a velocidade do motor</label>
+                <label><input type="radio" name="q6" value="b"> b) Realizar manutenção regular do veículo</label>
+                <label><input type="radio" name="q6" value="c"> c) Usar combustível de baixa qualidade</label>
+                <label><input type="radio" name="q6" value="d"> d) Deixar o motor ligado em paradas longas</label>
+            </div>
+        </div>
+
+        <div class="question" id="q7">
+            <p>7. Qual é o prazo para recorrer de uma multa de trânsito?</p>
+            <div class="options">
+                <label><input type="radio" name="q7" value="a"> a) 15 dias</label>
+                <label><input type="radio" name="q7" value="b"> b) 30 dias</label>
+                <label><input type="radio" name="q7" value="c"> c) 60 dias</label>
+                <label><input type="radio" name="q7" value="d"> d) 90 dias</label>
+            </div>
+        </div>
+
+        <div class="question" id="q8">
+            <p>8. Em caso de chuva, o que o condutor deve fazer?</p>
+            <div class="options">
+                <label><input type="radio" name="q8" value="a"> a) Aumentar a velocidade para evitar aquaplanagem</label>
+                <label><input type="radio" name="q8" value="b"> b) Reduzir a velocidade e aumentar a distância do veículo à frente</label>
+                <label><input type="radio" name="q8" value="c"> c) Desligar os faróis para economizar bateria</label>
+                <label><input type="radio" name="q8" value="d"> d) Acelerar para melhorar a aderência dos pneus</label>
+            </div>
+        </div>
+
+        <div class="question" id="q9">
+            <p>9. Qual é a principal função do sistema de freios?</p>
+            <div class="options">
+                <label><input type="radio" name="q9" value="a"> a) Aumentar a potência do motor</label>
+                <label><input type="radio" name="q9" value="b"> b) Reduzir ou parar o movimento do veículo</label>
+                <label><input type="radio" name="q9" value="c"> c) Melhorar a direção do veículo</label>
+                <label><input type="radio" name="q9" value="d"> d) Controlar a emissão de poluentes</label>
+            </div>
+        </div>
+
+        <div class="question" id="q10">
+            <p>10. O que significa a placa de trânsito com um triângulo vermelho e um pictograma de pedestres?</p>
+            <div class="options">
+                <label><input type="radio" name="q10" value="a"> a) Proibido estacionar</label>
+                <label><input type="radio" name="q10" value="b"> b) Passagem de pedestres</label>
+                <label><input type="radio" name="q10" value="c"> c) Estacionamento permitido</label>
+                <label><input type="radio" name="q10" value="d"> d) Proibido ultrapassar</label>
+            </div>
+        </div>
+
+        <div class="question" id="q11">
+            <p>11. Qual é a atitude correta ao ultrapassar um ciclista?</p>
+            <div class="options">
+                <label><input type="radio" name="q11" value="a"> a) Passar bem próximo para economizar espaço</label>
+                <label><input type="radio" name="q11" value="b"> b) Manter distância mínima de 1,5 metro</label>
+                <label><input type="radio" name="q11" value="c"> c) Buzinar para alertar o ciclista</label>
+                <label><input type="radio" name="q11" value="d"> d) Ultrapassar em alta velocidade</label>
+            </div>
+        </div>
+
+        <div class="question" id="q12">
+            <p>12. Em caso de hemorragia externa, o que deve ser feito?</p>
+            <div class="options">
+                <label><input type="radio" name="q12" value="a"> a) Aplicar pressão direta no ferimento</label>
+                <label><input type="radio" name="q12" value="b"> b) Lavar o ferimento com água corrente</label>
+                <label><input type="radio" name="q12" value="c"> c) Elevar a cabeça da vítima</label>
+                <label><input type="radio" name="q12" value="d"> d) Aplicar gelo no local</label>
+            </div>
+        </div>
+
+        <div class="question" id="q13">
+            <p>13. Qual é a velocidade máxima em rodovias de pista dupla para veículos leves?</p>
+            <div class="options">
+                <label><input type="radio" name="q13" value="a"> a) 80 km/h</label>
+                <label><input type="radio" name="q13" value="b"> b) 100 km/h</label>
+                <label><input type="radio" name="q13" value="c"> c) 110 km/h</label>
+                <label><input type="radio" name="q13" value="d"> d) 120 km/h</label>
+            </div>
+        </div>
+
+        <div class="question" id="q14">
+            <p>14. O que deve ser verificado regularmente no veículo para garantir a segurança?</p>
+            <div class="options">
+                <label><input type="radio" name="q14" value="a"> a) Nível de combustível</label>
+                <label><input type="radio" name="q14" value="b"> b) Condição dos pneus e freios</label>
+                <label><input type="radio" name="q14" value="c"> c) Cor da lataria</label>
+                <label><input type="radio" name="q14" value="d"> d) Volume do som do rádio</label>
+            </div>
+        </div>
+
+        <div class="question" id="q15">
+            <p>15. Qual é a consequência de dirigir sob efeito de álcool?</p>
+            <div class="options">
+                <label><input type="radio" name="q15" value="a"> a) Multa e suspensão da CNH</label>
+                <label><input type="radio" name="q15" value="b"> b) Apenas advertência verbal</label>
+                <label><input type="radio" name="q15" value="c"> c) Redução de pontos na CNH</label>
+                <label><input type="radio" name="q15" value="d"> d) Curso de reciclagem imediato</label>
+            </div>
+        </div>
+
+        <div class="question" id="q16">
+            <p>16. Qual é a distância mínima de segurança entre veículos em movimento?</p>
+            <div class="options">
+                <label><input type="radio" name="q16" value="a"> a) 1 metro</label>
+                <label><input type="radio" name="q16" value="b"> b) Distância que permita parar com segurança</label>
+                <label><input type="radio" name="q16" value="c"> c) 5 metros</label>
+                <label><input type="radio" name="q16" value="d"> d) 10 metros</label>
+            </div>
+        </div>
+
+        <div class="question" id="q17">
+            <p>17. Qual é o procedimento correto ao parar em um cruzamento com semáforo vermelho?</p>
+            <div class="options">
+                <label><input type="radio" name="q17" value="a"> a) Parar antes da faixa de pedestres</label>
+                <label><input type="radio" name="q17" value="b"> b) Parar no meio do cruzamento</label>
+                <label><input type="radio" name="q17" value="c"> c) Parar após a faixa de pedestres</label>
+                <label><input type="radio" name="q17" value="d"> d) Passar lentamente</label>
+            </div>
+        </div>
+
+        <div class="question" id="q18">
+            <p>18. O que deve ser feito com uma vítima inconsciente, mas que respira?</p>
+            <div class="options">
+                <label><input type="radio" name="q18" value="a"> a) Colocá-la em posição lateral de segurança</label>
+                <label><input type="radio" name="q18" value="b"> b) Sacudi-la para acordar</label>
+                <label><input type="radio" name="q18" value="c"> c) Aplicar respiração boca a boca</label>
+                <label><input type="radio" name="q18" value="d"> d) Levantar suas pernas</label>
+            </div>
+        </div>
+
+        <div class="question" id="q19">
+            <p>19. Qual é o significado de uma linha amarela contínua na pista?</p>
+            <div class="options">
+                <label><input type="radio" name="q19" value="a"> a) Permitido ultrapassar</label>
+                <label><input type="radio" name="q19" value="b"> b) Proibido ultrapassar</label>
+                <label><input type="radio" name="q19" value="c"> c) Permitido estacionar</label>
+                <label><input type="radio" name="q19" value="d"> d) Faixa exclusiva para ônibus</label>
+            </div>
+        </div>
+
+        <div class="question" id="q20">
+            <p>20. Qual é a forma correta de economizar combustível?</p>
+            <div class="options">
+                <label><input type="radio" name="q20" value="a"> a) Acelerar bruscamente</label>
+                <label><input type="radio" name="q20" value="b"> b) Manter velocidade constante e moderada</label>
+                <label><input type="radio" name="q20" value="c"> c) Dirigir com o motor desregulado</label>
+                <label><input type="radio" name="q20" value="d"> d) Usar marchas altas em baixa velocidade</label>
+            </div>
+        </div>
+
+        <div class="question" id="q21">
+            <p>21. Qual é a penalidade para quem ultrapassa em local proibido?</p>
+            <div class="options">
+                <label><input type="radio" name="q21" value="a"> a) Multa e 7 pontos na CNH</label>
+                <label><input type="radio" name="q21" value="b"> b) Advertência e 3 pontos na CNH</label>
+                <label><input type="radio" name="q21" value="c"> c) Multa e 4 pontos na CNH</label>
+                <label><input type="radio" name="q21" value="d"> d) Suspensão imediata da CNH</label>
+            </div>
+        </div>
+
+        <div class="question" id="q22">
+            <p>22. O que deve ser feito ao avistar um animal na pista?</p>
+            <div class="options">
+                <label><input type="radio" name="q22" value="a"> a) Acelerar para passar rápido</label>
+                <label><input type="radio" name="q22" value="b"> b) Reduzir a velocidade e sinalizar</label>
+                <label><input type="radio" name="q22" value="c"> c) Buzinar para espantar o animal</label>
+                <label><input type="radio" name="q22" value="d"> d) Parar no meio da pista</label>
+            </div>
+        </div>
+
+        <div class="question" id="q23">
+            <p>23. Qual é a função do sistema de suspensão do veículo?</p>
+            <div class="options">
+                <label><input type="radio" name="q23" value="a"> a) Absorver impactos e garantir estabilidade</label>
+                <label><input type="radio" name="q23" value="b"> b) Aumentar a potência do motor</label>
+                <label><input type="radio" name="q23" value="c"> c) Reduzir o consumo de combustível</label>
+                <label><input type="radio" name="q23" value="d"> d) Controlar a emissão de gases</label>
+            </div>
+        </div>
+
+        <div class="question" id="q24">
+            <p>24. Qual é a atitude correta ao dirigir à noite?</p>
+            <div class="options">
+                <label><input type="radio" name="q24" value="a"> a) Usar farol alto constantemente</label>
+                <label><input type="radio" name="q24" value="b"> b) Usar farol baixo e evitar ofuscar outros motoristas</label>
+                <label><input type="radio" name="q24" value="c"> c) Desligar os faróis em vias iluminadas</label>
+                <label><input type="radio" name="q24" value="d"> d) Usar apenas as luzes de posição</label>
+            </div>
+        </div>
+
+        <div class="question" id="q25">
+            <p>25. Qual é a prioridade em um cruzamento sem sinalização?</p>
+            <div class="options">
+                <label><input type="radio" name="q25" value="a"> a) Veículo que vem pela esquerda</label>
+                <label><input type="radio" name="q25" value="b"> b) Veículo que vem pela direita</label>
+                <label><input type="radio" name="q25" value="c"> c) Veículo de maior porte</label>
+                <label><input type="radio" name="q25" value="d"> d) Veículo em maior velocidade</label>
+            </div>
+        </div>
+
+        <div class="question" id="q26">
+            <p>26. O que deve ser feito em caso de aquaplanagem?</p>
+            <div class="options">
+                <label><input type="radio" name="q26" value="a"> a) Acelerar para recuperar o controle</label>
+                <label><input type="radio" name="q26" value="b"> b) Frear bruscamente</label>
+                <label><input type="radio" name="q26" value="c"> c) Reduzir a velocidade gradualmente e manter a direção reta</label>
+                <label><input type="radio" name="q26" value="d"> d) Girar o volante rapidamente</label>
+            </div>
+        </div>
+
+        <div class="question" id="q27">
+            <p>27. Qual é a importância de respeitar os limites de velocidade?</p>
+            <div class="options">
+                <label><input type="radio" name="q27" value="a"> a) Evitar multas apenas</label>
+                <label><input type="radio" name="q27" value="b"> b) Reduzir o risco de acidentes e salvar vidas</label>
+                <label><input type="radio" name="q27" value="c"> c) Aumentar o consumo de combustível</label>
+                <label><input type="radio" name="q27" value="d"> d) Facilitar ultrapassagens</label>
+            </div>
+        </div>
+
+        <div class="question" id="q28">
+            <p>28. Qual é a função do airbag no veículo?</p>
+            <div class="options">
+                <label><input type="radio" name="q28" value="a"> a) Proteger os ocupantes em colisões</label>
+                <label><input type="radio" name="q28" value="b"> b) Melhorar a aerodinâmica do veículo</label>
+                <label><input type="radio" name="q28" value="c"> c) Reduzir o consumo de combustível</label>
+                <label><input type="radio" name="q28" value="d"> d) Aumentar a velocidade máxima</label>
+            </div>
+        </div>
+
+        <div class="question" id="q29">
+            <p>29. O que deve ser feito ao transportar crianças menores de 7 anos?</p>
+            <div class="options">
+                <label><input type="radio" name="q29" value="a"> a) Usar cinto de segurança comum</label>
+                <label><input type="radio" name="q29" value="b"> b) Usar dispositivo de retenção adequado à idade</label>
+                <label><input type="radio" name="q29" value="c"> c) Permitir que viajem no banco dianteiro</label>
+                <label><input type="radio" name="q29" value="d"> d) Transportá-las no colo de um adulto</label>
+            </div>
+        </div>
+
+        <div class="question" id="q30">
+            <p>30. Qual é a atitude correta ao encontrar um pedestre na faixa?</p>
+            <div class="options">
+                <label><input type="radio" name="q30" value="a"> a) Parar e dar preferência ao pedestre</label>
+                <label><input type="radio" name="q30" value="b"> b) Passar rapidamente para não atrasar</label>
+                <label><input type="radio" name="q30" value="c"> c) Buzinar para alertar o pedestre</label>
+                <label><input type="radio" name="q30" value="d"> d) Acelerar para ultrapassar o pedestre</label>
+            </div>
+        </div>
+
+        <button type="button" onclick="correctQuiz()">Corrigir</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        const answers = {
+            q1: 'b', q2: 'b', q3: 'b', q4: 'b', q5: 'b',
+            q6: 'b', q7: 'b', q8: 'b', q9: 'b', q10: 'b',
+            q11: 'b', q12: 'a', q13: 'c', q14: 'b', q15: 'a',
+            q16: 'b', q17: 'a', q18: 'a', q19: 'b', q20: 'b',
+            q21: 'a', q22: 'b', q23: 'a', q24: 'b', q25: 'b',
+            q26: 'c', q27: 'b', q28: 'a', q29: 'b', q30: 'a'
+        };
+
+        function correctQuiz() {
+            let score = 0;
+            let resultHTML = '<h2>Resultado</h2>';
+            const form = document.getElementById('quizForm');
+            const questions = document.querySelectorAll('.question');
+
+            questions.forEach((question, index) => {
+                const qNum = index + 1;
+                const selected = form.querySelector(`input[name="q${qNum}"]:checked`);
+                const correctAnswer = answers[`q${qNum}`];
+                let isCorrect = false;
+
+                if (selected) {
+                    isCorrect = selected.value === correctAnswer;
+                    if (isCorrect) score++;
+                }
+
+                question.classList.add(isCorrect ? 'correct' : 'incorrect');
+                resultHTML += `<p>Questão ${qNum}: ${isCorrect ? 'Correta' : 'Incorreta. Resposta correta: ' + correctAnswer.toUpperCase()}</p>`;
+            });
+
+            const percentage = (score / 30) * 100;
+            const approved = score >= 21;
+            resultHTML = `<p><strong>Você acertou ${score} de 30 questões (${percentage.toFixed(2)}%).</strong></p>` +
+                         `<p><strong>${approved ? 'Aprovado!' : 'Reprovado. É necessário acertar pelo menos 21 questões.'}</strong></p>` +
+                         resultHTML;
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = resultHTML;
+            resultDiv.style.display = 'block';
+            resultDiv.style.backgroundColor = approved ? '#dff0d8' : '#f2dede';
+        }
+    </script>
+</body>
+</html>
